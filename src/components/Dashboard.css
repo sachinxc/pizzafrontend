@@ -1,0 +1,292 @@
+/* Base styles for fonts and general layout */
+body {
+  font-family: "Arial", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+.dashboard {
+  width: 90%;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+/* Header Styles */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ff4c6f;
+  color: white;
+}
+
+.subheaders {
+  display: flex;
+  justify-content: center;
+}
+
+.header-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.header-info button {
+  background-color: #ffffff;
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.header-info button:hover {
+  background-color: #555;
+}
+
+.loyalty-points-container {
+  background-color: #ffeb3b;
+  color: black;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Menu Section */
+.menu {
+  margin: 30px 0;
+}
+
+.pizza-menu {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.pizza-card {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 350px;
+  text-align: center;
+  margin: 20px;
+}
+
+.pizza-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.pizza-options {
+  margin: 10px 0;
+}
+
+.pizza-price {
+  font-weight: bold;
+}
+
+.pizza-actions button,
+.favorite-button {
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: 100%;
+}
+
+.pizza-actions button:hover,
+.favorite-button:hover {
+  background-color: #ff534f;
+}
+
+.favorite-button {
+  background-color: #ffeb3b;
+}
+
+.favorite-button:hover {
+  background-color: #fdd835;
+}
+
+/* Input Fields and Selectors */
+input[type="text"],
+select {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #54dd8d;
+  outline: none;
+}
+
+select {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+select::-ms-expand {
+  display: none; /* Remove default dropdown arrow in IE */
+}
+
+/* Welcome Section */
+.welcome-section h1 {
+  font-size: 2rem;
+}
+
+/* Media Queries */
+@media (max-width: 600px) {
+  /* Adjust custom pizza options for smaller screens */
+  .custom-pizza .custom-pizza-options {
+    flex-direction: column; /* Stack options on smaller screens */
+    gap: 10px;
+  }
+}
+
+/* Custom Pizza Section */
+.custom-pizza {
+  background-color: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 50px auto;
+  max-width: 600px;
+  font-family: "Arial", sans-serif;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.custom-pizza h2 {
+  font-size: 2rem;
+  color: #333;
+  text-align: center;
+  margin: 0;
+}
+
+.custom-pizza form {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  align-items: center;
+}
+
+.custom-pizza .select-group {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.custom-pizza .select-group select {
+  flex: 1; /* Ensures the selects share available space evenly */
+}
+
+.custom-pizza label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 1rem;
+  color: #333;
+}
+
+.custom-pizza input[type="text"],
+.custom-pizza select {
+  padding: 12px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  width: 100%;
+  margin-top: 10px;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.custom-pizza input[type="text"]:focus,
+.custom-pizza select:focus {
+  border-color: #54dd8d;
+  outline: none;
+}
+
+.custom-pizza button {
+  grid-column: span 1;
+  margin: 0 auto;
+  padding: 10px 15px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: block;
+}
+
+.custom-pizza button:hover {
+  background-color: #0056b3;
+}
+
+.custom-pizza .toppings {
+  grid-column: span 1;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 10px;
+}
+
+.custom-pizza .toppings .chip {
+  padding: 8px 16px;
+  background-color: #f1f1f1;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 1rem;
+  color: #333;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.custom-pizza .toppings .chip.selected {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+.custom-pizza .toppings .chip:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .custom-pizza form {
+    grid-template-columns: 1fr;
+  }
+
+  .custom-pizza .toppings {
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  }
+
+  .custom-pizza .custom-pizza-options {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .custom-pizza .select-group {
+    flex-direction: column; /* Stack selectors on smaller screens */
+    gap: 10px;
+  }
+}
